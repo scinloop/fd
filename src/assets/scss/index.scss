@@ -20,7 +20,8 @@
       background-repeat: no-repeat;
 
       .title-text {
-        font-size: 0.3rem;
+        font-size: 0.35rem;
+        font-weight: bold;
         position: absolute;
         bottom: 0;
         left: 50%;
@@ -59,6 +60,10 @@
         display: inline-block;
         transform: skewX(45deg);
       }
+
+      .text_chart {
+        font-size: 1em;
+      }
     }
 
     .react-right {
@@ -94,7 +99,7 @@
       //下方区域的布局
       .content-box {
         display: grid;
-        grid-template-columns: 3fr 4fr 3fr;
+        grid-template-columns: 5fr 3fr;
 
       }
 
@@ -106,6 +111,7 @@
         width: 100%;
         grid-template-columns: repeat(1, 100%);
       }
+
       .bototm-box2 {
         margin-top: 1.125rem;
         display: grid;
