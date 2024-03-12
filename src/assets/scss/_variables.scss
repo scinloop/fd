@@ -18,44 +18,55 @@ $base-font-size: 0.2rem;
 $font-sizes: (
   xxs: 0.1,
   //8px
-    xs: 0.125,
+  xs: 0.125,
   //10px
-    sm: 0.2875,
+  sm: 0.2875,
   //12px
-    md: 0.1625,
+  md: 0.1625,
   //13px
-    lg: 0.175,
+  lg: 0.175,
   //14px
-    xl: 0.2,
+  xl: 0.2,
   //16px
-    xxl: 0.225,
+  xxl: 0.225,
   //18px
-    xxxl: 0.25 //20px,,,,
+  xxxl: 0.25 //20px,,,,
 );
 
 // 宽高
 .w-100 {
   width: 100%;
 }
+
 .h-100 {
   height: 100%;
 }
+
 .module-item {
   height: 50px;
 }
+
 //flex
 .d-flex {
   display: flex;
 }
+
 .flex-column {
   flex-direction: column;
 }
+
 .flex-wrap {
   flex-wrap: wrap;
 }
+
 .flex-nowrap {
   flex-wrap: nowrap;
 }
+
+.jc-center {
+  justify-content: center;
+}
+
 $flex-jc: (
   start: flex-start,
   end: flex-end,

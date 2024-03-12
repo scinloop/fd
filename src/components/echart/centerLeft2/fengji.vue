@@ -1,6 +1,8 @@
 <template>
     <div>
-        <div class="windmill">
+        <el-popover ref="popover" placement="top-start" width="200" trigger="hover" title="wowo" content="风机122121212">
+        </el-popover>
+        <div v-popover:popover class="windmill">
             <div class="leaf"><img src="../../../assets/leaf.png"></div>
             <div class="leaf"><img src="../../../assets/leaf.png"></div>
             <div class="leaf"><img src="../../../assets/leaf.png"></div>
@@ -10,32 +12,18 @@
             <div class="leaf"><img src="../../../assets/leaf.png"></div>
             <div class="leaf"><img src="../../../assets/leaf.png"></div>
         </div>
-        <div class="bg">
-            <div class="center"><img src="../../../assets/center.png"></div>
-            <div class="body"><img src="../../../assets/body.png"></div>
-        </div>
-        <div class="speedbuttons">
-            <button class="btn speedup">Speed Up</button>
-            <button class="btn speeddown">Speed Down</button>
-        </div>
-        <div class="amountbuttons">
-            <button class="btn amountup">Amount Up</button>
-            <button class="btn amountdown">Amount Down</button>
-        </div>
+        <div class="center"><img src="../../../assets/center.png"></div>
+        <div class="body"><img src="../../../assets/body.png"></div>
     </div>
 </template>
 
 <script>
 export default {
     mounted() {
-        let su = document.querySelector(".speedup"),
-            sd = document.querySelector(".speeddown"),
-            au = document.querySelector(".amountup"),
-            ad = document.querySelector(".amountdown"),
-            wm = document.querySelector(".windmill"),
-            s = 3,
-            a = 3,
-            lf = document.getElementsByClassName('leaf');
+        let wm = this.$el.querySelector(".windmill");
+        let s = 3;
+        let a = 3;
+        let lf = this.$el.getElementsByClassName('leaf');
 
         function setup() {
             wm.style.animationDuration = s + "s";
@@ -49,38 +37,12 @@ export default {
             }
         }
 
-        sd.onclick = () => {
-            s += 0.2;
-            setup();
-        };
-
-        su.onclick = () => {
-            if (s > 0.1) {
-                s -= 0.1;
-                setup();
-            }
-        };
-
-        ad.onclick = () => {
-            if (a > 3) {
-                a -= 1;
-                setup();
-            }
-        };
-
-        au.onclick = () => {
-            if (a < 8) {
-                a += 1;
-                setup();
-            }
-        };
-
         setup();
     },
 };
 </script>
 
-<style>
+<style lang="scss">
 * {
     margin: 0px;
     padding: 0px;
@@ -96,31 +58,29 @@ button {
 }
 
 .windmill {
-    width: 310.4px;
-    height: 310.4px;
+    width: 77.6px;
+    height: 77.6px;
     position: absolute;
     top: 50%;
     left: 50%;
-    margin: -155.2px 0 0 -155.2px;
-    /*border: solid 1px red;*/
-    /*background-color: white;*/
+    margin: -38.8px 0 0 -38.8px;
     animation-name: rotate;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+    z-index: 3;
 }
 
 .leaf {
-    width: 50.4px;
-    height: 155.2px;
-    /*border: 125px 25px 0 25px;*/
+    width: 12.6px;
+    height: 38.8px;
     position: absolute;
     top: 0;
     left: 50%;
-    margin-left: -4px;
-    /*background-color: #fff;*/
+    margin-left: -2px;
     transform-origin: 2.5% 100%;
     transform: rotate(0);
     display: none;
+    z-index: 3;
 }
 
 .leaf img {
@@ -128,12 +88,13 @@ button {
 }
 
 .center {
-    width: 33.6px;
-    height: 33.6px;
+    width: 8.4px;
+    height: 8.4px;
     position: absolute;
     top: 50%;
     left: 50%;
-    margin: -16.8px 0 0 -16.8px;
+    margin: -4.2px 0 0 -4.2px;
+    z-index: 3;
 }
 
 .center img {
@@ -141,20 +102,20 @@ button {
 }
 
 .body {
-    width: 144px;
-    height: 163.2px;
+    width: 36px;
+    height: 40.8px;
     position: absolute;
     top: 50%;
     left: 50%;
-    margin-left: -72px;
-    z-index: -1;
+    margin-left: -18px;
+    z-index: 1;
 }
 
 .body img {
     width: 100%;
 }
 
-.speedbuttons {
+/*.body .speedbuttons {
     position: absolute;
     top: 15%;
     left: 50%;
@@ -178,6 +139,7 @@ button {
     background-color: #eee;
     font-family: PingFang SC, Microsoft YaHei;
 }
+*/
 
 @keyframes rotate {
     0% {
@@ -186,6 +148,29 @@ button {
 
     100% {
         transform: rotate(360deg);
+    }
+}
+
+#centreLeft1 {
+    padding: 0.2rem;
+    height: 9.125rem;
+    min-width: 3.75rem;
+    border-radius: 0.0625rem;
+
+    .bg-color-black {
+        height: 4.8125rem;
+        border-radius: 0.125rem;
+    }
+
+    .text_chart {
+        color: #c3cbde;
+        font-size: 1em;
+        font-weight: bold;
+    }
+
+    .body-box {
+        border-radius: 0.125rem;
+        overflow: hidden;
     }
 }
 </style>

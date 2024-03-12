@@ -56,13 +56,14 @@
           </span>
           <span class="fs-xl text mx-2" :style="{ color: activeModule === 8 ? '#5cd9e8' : '#fff' }">风机19</span>
         </div>
-        <div class="d-flex" @click="activeModule =9" :style="{ color: activeModule === 9 ? '#5cd9e8' : '#fff' }">
+        <div class="d-flex" @click="activeModule = 9" :style="{ color: activeModule === 9 ? '#5cd9e8' : '#fff' }">
           <span>
             <icon name="chart-bar"></icon>
           </span>
           <span class="fs-xl text mx-2" :style="{ color: activeModule === 9 ? '#5cd9e8' : '#fff' }">风机20</span>
         </div>
-        <div class="d-flex"  v-if="isRendered" @click="activeModule =10" :style="{ color: activeModule === 10? '#5cd9e8' : '#fff' }">
+        <div class="d-flex" v-if="isRendered" @click="activeModule = 10"
+          :style="{ color: activeModule === 10 ? '#5cd9e8' : '#fff' }">
           <span>
             <icon name="chart-bar"></icon>
           </span>
@@ -138,7 +139,7 @@ export default {
     bottomLeftChart9,
     bottomLeftChart10
   },
-  mounted() {},
+  mounted() { },
   methods: {},
   computed: {
     ...mapState({
@@ -159,17 +160,21 @@ export default {
   height: 6.5rem;
   min-width: 3.75rem;
   border-radius: 0.0625rem;
+
   .bg-color-black {
     height: 6.0625rem;
     border-radius: 0.125rem;
   }
+
   .text {
     color: #c3cbde;
   }
+
   .chart-box {
     margin-top: 0.2rem;
     width: 2.125rem;
     height: 2.125rem;
+
     .active-ring-name {
       padding-top: 0.125rem;
     }

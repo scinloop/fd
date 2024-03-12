@@ -53,27 +53,20 @@
                 <centerLeft1 />
               </dv-border-box-12>
             </div> -->
-            <div>
+            <div class="LeftBottom">
               <dv-border-box-12>
-                <!-- <centerLeft3 /> -->
-                <fj />
+                <centerLeft4 />
               </dv-border-box-12>
-            </div>
-            <!-- 中间 -->
-            <!-- <div>
-              <center />
-            </div> -->
+              <dv-border-box-13>
+                <bottomLeft />
+              </dv-border-box-13>
 
+            </div>
             <div>
               <dv-border-box-13>
                 <centerRight3 />
               </dv-border-box-13>
             </div>
-            <!-- <div>
-              <dv-border-box-13>
-                <centerRight1 />
-              </dv-border-box-13>
-            </div> -->
           </div>
 
           <!-- 第四行数据 -->
@@ -106,6 +99,7 @@
 
 
         <div class="body-box" v-if="currentTab === 3">
+          <fjdialog />
 
         </div>
 
@@ -118,6 +112,7 @@
 // import centerLeft1 from "./centerLeft1";
 // import centerLeft2 from "./centerLeft2";
 // import centerLeft3 from "./centerLeft3";
+import centerLeft4 from "./centerLeft4";
 // import centerRight1 from "./centerRight1";
 // import centerRight2 from "./centerRight2";
 import centerRight3 from "./centerRight3";
@@ -126,8 +121,10 @@ import centerRight3 from "./centerRight3";
 import secondCenter from "./secondCenter";
 import ThreeCenter from "./ThreeCenter";
 // import bottomLeft2 from "./bottomLeft2";
-import fj from "../components/echart/centerLeft2/fengji";
-// import bottomRight from "./bottomRight";
+// import Fengji from '../components/echart/centerLeft2/fengji.vue';
+// import Center from './center.vue';
+// import fengji2 from "../components/echart/centerLeft2/fengji2.vue";
+import fjdialog from "../components/dialog/dialog.vue";
 export default {
   data() {
     return {
@@ -141,16 +138,19 @@ export default {
     // centerLeft1,
     // centerLeft2,
     // centerLeft3,
+    centerLeft4,
     // centerRight1,
     // centerRight2,
     centerRight3,
     // center,
     // bottomLeft,
     secondCenter,
-    fj,
+    // Center,
+    // fengji2,
 
     // bottomLeft2,
     // bottomRight
+    fjdialog,
   },
   mounted() {
     this.cancelLoading();
@@ -191,5 +191,11 @@ export default {
 
 .active {
   background-color: #1E90FF;
+}
+
+.LeftBottom {
+  display: grid;
+  grid-template-rows: 3.5fr 2fr;
+
 }
 </style>
