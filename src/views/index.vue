@@ -55,7 +55,8 @@
             </div> -->
             <div>
               <dv-border-box-12>
-                <centerLeft3 />
+                <!-- <centerLeft3 /> -->
+                <fj />
               </dv-border-box-12>
             </div>
             <!-- 中间 -->
@@ -116,7 +117,7 @@
 <script>
 // import centerLeft1 from "./centerLeft1";
 // import centerLeft2 from "./centerLeft2";
-import centerLeft3 from "./centerLeft3";
+// import centerLeft3 from "./centerLeft3";
 // import centerRight1 from "./centerRight1";
 // import centerRight2 from "./centerRight2";
 import centerRight3 from "./centerRight3";
@@ -125,7 +126,7 @@ import centerRight3 from "./centerRight3";
 import secondCenter from "./secondCenter";
 import ThreeCenter from "./ThreeCenter";
 // import bottomLeft2 from "./bottomLeft2";
-
+import fj from "../components/echart/centerLeft2/fengji";
 // import bottomRight from "./bottomRight";
 export default {
   data() {
@@ -139,13 +140,14 @@ export default {
     ThreeCenter,
     // centerLeft1,
     // centerLeft2,
-    centerLeft3,
+    // centerLeft3,
     // centerRight1,
     // centerRight2,
     centerRight3,
     // center,
     // bottomLeft,
     secondCenter,
+    fj,
 
     // bottomLeft2,
     // bottomRight

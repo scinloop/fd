@@ -2,8 +2,8 @@
     <div id="centreLeft1">
         <div class="bg-color-black">
             <div class="d-flex pt-2 pl-2">
-                <span>
-                    <icon name="chart-bar" style="color:white;"></icon>
+                <span style="color:#5cd9e8">
+                    <i class="el-icon-edit"></i>
                 </span>
                 <div class="d-flex">
                     <span class="fs-xl mx-2 text_chart">相关性分析</span>
@@ -133,8 +133,10 @@ export default {
         border-radius: 0.125rem;
     }
 
-    .text {
+    .text_chart {
         color: #c3cbde;
+        font-size: 1em;
+        font-weight: bold;
     }
 
     .chart-box {

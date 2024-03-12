@@ -3,14 +3,14 @@
         <div class="bg-color-black">
             <div class="d-flex pt-2 pl-2">
                 <span style="color:#5cd9e8">
-                    <icon name="chart-line"></icon>
+                    <i class="el-icon-edit"></i>
                 </span>
                 <div class="d-flex">
-                    <span class="fs-xl text mx-2">风机数据分析</span>
+                    <span class="fs-xl text_chart mx-2">风机数据分析</span>
                 </div>
             </div>
             <div class="d-flex jc-center body-box">
-                <dv-scroll-board :config="config" style="width:6.5rem;height:4.28rem" />
+                <dv-scroll-board :config="config" style="width:8.5rem;height:9.5rem" />
             </div>
         </div>
     </div>
@@ -133,7 +133,7 @@ export default {
 <style lang="scss">
 #centreRight1 {
     padding: 0.2rem;
-    height: 5.125rem;
+    height: 10.5rem;
     min-width: 3.75rem;
     border-radius: 0.0625rem;
 
@@ -142,8 +142,10 @@ export default {
         border-radius: 0.125rem;
     }
 
-    .text {
+    .text_chart {
         color: #c3cbde;
+        font-size: 1em;
+        font-weight: bold;
     }
 
     .body-box {
