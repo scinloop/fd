@@ -12,7 +12,7 @@
             </div>
             <div class="d-flex jc-center flex-wrap ten_grid">
                 <div style="position: relative;">
-                    <a>
+                    <a @click="notify">
                         <fengji :key="1" />
                     </a>
                 </div>
@@ -138,6 +138,9 @@ export default {
                 item.number.number[0] += ++index;
                 item.number = { ...item.number };
             });
+        },
+        notify() {
+            this.$emit('changeTab', 3);
         }
     }
 };

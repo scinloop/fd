@@ -25,17 +25,17 @@
             <div class="react-right ml-4" style="width: 6.25rem; text-align: left;background-color: #0f1325;"
               @click="currentTab = 0" :class="{ 'active': currentTab === 0 }">
               <span class="react-before"></span>
-              <span class="text fw-b" style="margin-left: 70px;">数据分析</span>
+              <span class="text fw-b" style="margin-left: 70px;">风机展示</span>
             </div>
             <div class="react-right ml-3" style="background-color: #0f1325;" @click="currentTab = 1"
               :class="{ 'active': currentTab === 1 }">
-              <span class="text fw-b">滚动预测</span>
+              <span class="text fw-b">模型训练与长期预测</span>
             </div>
           </div>
           <div style="width: 40%" class="d-flex">
             <div class="react-left  mr-3 " style="background-color: #0f1325;" @click="currentTab = 2"
               :class="{ 'active': currentTab === 2 }">
-              <span class="text fw-b">实时预测</span>
+              <span class="text fw-b">短期预测</span>
             </div>
             <div class="react-left mr-4" @click="currentTab = 3" :class="{ 'active': currentTab === 3 }"
               style="width: 6.25rem; background-color: #0f1325; text-align: right;">
@@ -55,7 +55,7 @@
             </div> -->
             <div class="LeftBottom">
               <dv-border-box-12>
-                <centerLeft4 />
+                <centerLeft4 @changeTab="handleTabChange" />
               </dv-border-box-12>
               <dv-border-box-13>
                 <bottomLeft />
@@ -99,8 +99,8 @@
 
 
         <div class="body-box" v-if="currentTab === 3">
+          <div>das</div>
           <fjdialog />
-
         </div>
 
       </div>
@@ -181,6 +181,9 @@ export default {
     getWeekday(day) {
       const weekdays = ["周日", "周一", "周二", "周三", "周四", "周五", "周六"];
       return weekdays[day];
+    },
+    handleTabChange(tab) {
+      this.currentTab = tab;
     },
   }
 };
