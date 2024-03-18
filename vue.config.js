@@ -9,6 +9,13 @@ module.exports = {
     config.resolve.alias
       .set('_c', resolve('src/components')) // key,value自行定义，比如.set('@@', resolve('src/components'))
   },
+  configureWebpack: {
+    resolve: {
+      alias: {
+        '@': path.resolve(__dirname, 'src/')
+      }
+    }
+  },
   devServer: {
     // 设置代理
     proxy: {
