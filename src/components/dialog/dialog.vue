@@ -1,15 +1,26 @@
 <template>
-    <div>
-        <el-input v-model="searchValue" size="mini" clearable placeholder="请输入编号或城市" style="width:300px"></el-input>
-        <el-button type="primary" size="mini" @click="doFilter">搜索</el-button>
-        <el-table :data="tableData" border>
-            <el-table-column prop="number" label="编号" width="180" align="center"></el-table-column>
-            <el-table-column prop="name" label="姓名" width="180" align="center"></el-table-column>
-            <el-table-column prop="address" label="地址" width="180" align="center"></el-table-column>
-        </el-table>
-        <el-pagination @size-change="handleSizeChange" @current-change="handleCurrentChange" :current-page="currentPage"
-            :page-sizes="[1, 4, 8]" :page-size="pageSize" layout="total, sizes, prev, pager, next, jumper"
-            :total="totalItems"></el-pagination>
+    <div id="centreRight1">
+        <div class="bg-color-black">
+            <div class="d-flex pt-2 pl-2">
+                <span style="color:#5cd9e8">
+                    <i class="el-icon-edit"></i>
+                </span>
+                <div class="d-flex">
+                    <span class="fs-xl text_chart mx-2">风机数据分析</span>
+                </div>
+            </div>
+            <el-input v-model="searchValue" size="mini" clearable placeholder="请输入编号或城市" style="width:300px"></el-input>
+            <el-button type="primary" size="mini" @click="doFilter">搜索</el-button>
+            <el-table :data="tableData" border class="transparent-table">
+                <el-table-column prop="number" label="编号" width="180" align="center"></el-table-column>
+                <el-table-column prop="name" label="姓名" width="180" align="center"></el-table-column>
+                <el-table-column prop="address" label="地址" width="180" align="center"></el-table-column>
+            </el-table>
+            <el-pagination @size-change="handleSizeChange" @current-change="handleCurrentChange"
+                :current-page="currentPage" :page-sizes="[1, 4, 8]" :page-size="pageSize"
+                layout="total, sizes, prev, pager, next, jumper" :total="totalItems"></el-pagination>
+        </div>
+
     </div>
 </template>
 
@@ -102,3 +113,65 @@ export default {
     }
 };
 </script>
+<style scoped lang="scss">
+#centreRight1 {
+    padding: 0.2rem;
+    height: 10.5rem;
+    min-width: 3.75rem;
+    border-radius: 0.0625rem;
+
+    .bg-color-black {
+        height: 4.8125rem;
+        border-radius: 0.125rem;
+    }
+
+    .text_chart {
+        color: #c3cbde;
+        font-size: 1em;
+        font-weight: bold;
+    }
+
+    .body-box {
+        border-radius: 0.125rem;
+        overflow: hidden;
+    }
+}
+
+el-table {
+    margin-top: 0.2rem;
+    height: 3.5rem;
+    min-width: 3.75rem;
+    border-radius: 0.0625rem;
+}
+
+/* 最外层透明 */
+::v-deep .el-table,
+::v-deep .el-table__expanded-cell {
+    background-color: transparent;
+}
+
+/* 表格内背景颜色 */
+::v-deep .el-table th,
+::v-deep .el-table tr,
+::v-deep .el-table td {
+    background-color: transparent;
+}
+
+/* 修改表格单元格文字颜色和大小 */
+::v-deep .el-table .el-table__body td {
+    color: white;
+    /* 文字颜色 */
+    font-size: 14px;
+    /* 文字大小 */
+    font-weight: bold;
+}
+
+/* 如果需要，也可以修改表头文字的颜色和大小 */
+::v-deep .el-table .el-table__header-wrapper th {
+    color: white;
+    /* 文字颜色 */
+    font-size: 16px;
+    /* 文字大小 */
+    font-weight: bold;
+}
+</style>

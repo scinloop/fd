@@ -1,16 +1,13 @@
 <template>
   <div id="bottomLeft2">
     <div class="bg-color-black">
-
       <div class="d-flex pt-2 pl-2 module-item">
-
         <div class="d-flex" @click="activeModule = 0" :style="{ color: activeModule === 0 ? '#5cd9e8' : '#fff' }">
-          <span>
-            <icon name="chart-bar"></icon>
+          <span style="color:#5cd9e8">
+            <i class="el-icon-edit"></i>
           </span>
           <span class="fs-xl text mx-2" :style="{ color: activeModule === 0 ? '#5cd9e8' : '#fff' }">新风机</span>
         </div>
-
       </div>
       <div v-if="activeModule === 0">
         <bottomLeftChart />
@@ -81,7 +78,7 @@ export default {
     bottomLeftChart9,
 
   },
-  mounted() {},
+  mounted() { },
   methods: {
     handleDateChange(value) {
       console.log('Selected date range:', value);
@@ -103,25 +100,31 @@ export default {
   height: 9.5rem;
   min-width: 3.75rem;
   border-radius: 0.0625rem;
+
   .bg-color-black {
     height: 9.0625rem;
     border-radius: 0.125rem;
   }
+
   .text {
     color: #c3cbde;
   }
+
   .chart-box {
     margin-top: 1rem;
     width: 2.125rem;
     height: 2.125rem;
+
     .active-ring-name {
       padding-top: 0.125rem;
     }
   }
 }
+
 .module-item {
   height: 100px;
 }
+
 .module-item .text {
   font-size: 18px;
 }

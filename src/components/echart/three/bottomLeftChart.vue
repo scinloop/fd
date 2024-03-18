@@ -1,9 +1,5 @@
 <template>
   <div>
-
-
-
-
     <div id="bottomLeftChart" style="width:100%;height:6.0rem;"></div>
   </div>
 </template>
@@ -46,12 +42,12 @@ export default {
       value1: [new Date(2000, 10, 10, 10, 10), new Date(2000, 10, 11, 10, 10)],
       value2: '',
       chart: null,
-      Listdata:null,
-      Time:null,
-      histroy:null,
-      predict2:null,
-      predict1:null,
-      time:null,
+      Listdata: null,
+      Time: null,
+      histroy: null,
+      predict2: null,
+      predict1: null,
+      time: null,
 
     };
   },
@@ -73,20 +69,20 @@ export default {
       this.timer = setInterval(() => {
         // 发送请求
         axios.get(`/api/power/get_real_time_predict/${no}`)
-            .then(response => {
-              // 请求成功
-              console.log(response.data);
-              const ResData = response.data;
-              this.histroy = ResData[0];
-              this.predict1 = ResData[1];
-              this.predict2 = ResData[2];
-              this.time = ResData[3];
-              this.draw();
-            })
-            .catch(error => {
-              // 请求失败
-              console.log(error);
-            });
+          .then(response => {
+            // 请求成功
+            console.log(response.data);
+            const ResData = response.data;
+            this.histroy = ResData[0];
+            this.predict1 = ResData[1];
+            this.predict2 = ResData[2];
+            this.time = ResData[3];
+            this.draw();
+          })
+          .catch(error => {
+            // 请求失败
+            console.log(error);
+          });
 
         // 将数字增加1，如果数字已经增加到20，则重新从1开始
         no = (no % 20) + 1;
@@ -103,7 +99,7 @@ export default {
       //  ----------------------------------------------------------------
       let Time = this.time;
       let predict1 = this.predict1;
-      let predict2 =  this.predict2;
+      let predict2 = this.predict2;
       let histroy = this.histroy;
 
 
@@ -157,7 +153,7 @@ export default {
         },
         yAxis: [
           {
-          // name:"风速/风速",
+            // name:"风速/风速",
             splitLine: { show: false },
             axisLine: {
               lineStyle: {
@@ -227,7 +223,7 @@ export default {
               normal: {
                 barBorderRadius: 5,
 
-            color: "rgb(216,239,6)" ,
+                color: "rgb(216,239,6)",
 
 
               }
@@ -252,9 +248,9 @@ export default {
   margin-left: 2rem;
 
 }
+
 .custom-date-picker .el-input__inner {
   font-weight: bold;
   color: #B4B4B4;
 }
 </style>
-

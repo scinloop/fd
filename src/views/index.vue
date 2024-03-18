@@ -85,7 +85,6 @@
             <dv-border-box-13>
               <secondCenter />
             </dv-border-box-13>
-
           </div>
         </div>
         <div class="body-box" v-if="currentTab === 2">
@@ -99,8 +98,10 @@
 
 
         <div class="body-box" v-if="currentTab === 3">
-          <div>das</div>
-          <fjdialog />
+          <dv-border-box-13>
+            <fjdialog />
+          </dv-border-box-13>
+
         </div>
 
       </div>

@@ -6,7 +6,7 @@
                     <i class="el-icon-edit"></i>
                 </span>
                 <div class="d-flex">
-                    <span class="fs-xl mx-2 text_chart">相关性分析</span>
+                    <span class="fs-xl mx-2 text_chart">风机信息</span>
                     <dv-decoration-3 style="width:1.25rem;height:.25rem; position:relative;top:-.0375rem;" />
                 </div>
             </div>
