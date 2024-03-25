@@ -13,11 +13,11 @@ export default {
     window.addEventListener('resize', this[resizeChartMethod], false);
   },
   beforeDestroy() {
-    window.removeEventListener('reisze', this[resizeChartMethod]);
+    window.removeEventListener('resize', this[resizeChartMethod]);
   },
   methods: {
     // 通过lodash的防抖函数来控制resize的频率
-    [resizeChartMethod]: debounce(function() {
+    [resizeChartMethod]: debounce(function () {
       if (this.chart) {
         this.chart.resize();
       }
