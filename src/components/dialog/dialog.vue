@@ -15,7 +15,12 @@
                 <el-table-column prop="number" label="编号" width="180" align="center"></el-table-column>
                 <el-table-column prop="name" label="姓名" width="180" align="center"></el-table-column>
                 <el-table-column prop="address" label="地址" width="180" align="center"></el-table-column>
+                <el-table-column prop="address" label="地址" width="180" align="center"></el-table-column>
+                <el-table-column prop="address" label="地址" width="180" align="center"></el-table-column>
+                <el-table-column prop="address" label="地址" width="180" align="center"></el-table-column>
             </el-table>
+            <!-- <predict></predict> -->
+
             <el-pagination @size-change="handleSizeChange" @current-change="handleCurrentChange"
                 :current-page="currentPage" :page-sizes="[1, 4, 8]" :page-size="pageSize"
                 layout="total, sizes, prev, pager, next, jumper" :total="totalItems"></el-pagination>
@@ -25,7 +30,9 @@
 </template>
 
 <script>
+// import predict from '../echart/predict/predict.vue';
 export default {
+    // components: { predict },
     data() {
         return {
             resData: [

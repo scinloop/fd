@@ -99,7 +99,7 @@
 
         <div class="body-box" v-if="currentTab === 3">
           <dv-border-box-13>
-            <Predict></Predict>
+            <modeltraining></modeltraining>
           </dv-border-box-13>
 
         </div>
@@ -126,7 +126,8 @@ import ThreeCenter from "./ThreeCenter";
 // import Center from './center.vue';
 // import fengji2 from "../components/echart/centerLeft2/fengji2.vue";
 // import fjdialog from "../components/dialog/dialog.vue";
-import Predict from '../components/echart/predict/predict.vue';
+// import Predict from '../components/echart/predict/predict.vue';
+import Modeltraining from './modeltraining.vue';
 export default {
   data() {
     return {
@@ -153,7 +154,8 @@ export default {
     // bottomLeft2,
     // bottomRight
     // fjdialog,
-    Predict,
+    // Predict,
+    Modeltraining,
   },
   mounted() {
     this.cancelLoading();
