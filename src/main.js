@@ -8,6 +8,9 @@ import dataV from '@jiaminghi/data-view';
 Vue.use(dataV);
 Vue.use(ElementUI);
 
+//引入import { Cosmograph } from '@cosmograph/cosmograph'
+// import { Cosmograph } from '@cosmograph/cosmograph';
+// import { Graph } from '../../node_modules/@cosmograph/cosmos';
 
 // 按需引入vue-awesome图标
 import Icon from 'vue-awesome/components/Icon';

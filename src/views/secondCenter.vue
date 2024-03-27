@@ -2,7 +2,7 @@
   <div id="bottomLeft2">
     <div class="bg-color-black">
 
-      <div class="d-flex pt-2 pl-2 module-item">
+      <div class="d-flex pt-2 pl-2">
 
         <div class="d-flex" @click="activeModule = 0" :style="{ color: activeModule === 0 ? '#5cd9e8' : '#fff' }">
           <span>
@@ -125,7 +125,7 @@ export default {
 }
 
 .module-item {
-  height: 100px;
+  height: 50px;
 }
 
 .module-item .text {
@@ -133,6 +133,6 @@ export default {
 }
 
 .module-item icon {
-  font-size: 30px;
+  font-size: 50px;
 }
 </style>

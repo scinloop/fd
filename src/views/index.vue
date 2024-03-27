@@ -83,7 +83,9 @@
           <!-- 第四行数据 -->
           <div class="bototm-box2">
             <dv-border-box-13>
-              <secondCenter />
+              <!-- <secondCenter /> -->
+
+              <modeltraining></modeltraining>
             </dv-border-box-13>
           </div>
         </div>
@@ -92,16 +94,15 @@
             <dv-border-box-13>
               <ThreeCenter />
             </dv-border-box-13>
-
           </div>
         </div>
-
-
         <div class="body-box" v-if="currentTab === 3">
           <dv-border-box-13>
-            <modeltraining></modeltraining>
+            <!-- <modeltraining></modeltraining> -->
+            <!-- <graph />
+             -->
+            <gra />
           </dv-border-box-13>
-
         </div>
 
       </div>
@@ -119,14 +120,10 @@ import centerLeft4 from "./centerLeft4";
 import centerRight3 from "./centerRight3";
 // import center from "./center";
 // import bottomLeft from "./bottomLeft";
-import secondCenter from "./secondCenter";
+// import secondCenter from "./secondCenter";
 import ThreeCenter from "./ThreeCenter";
-// import bottomLeft2 from "./bottomLeft2";
-// import Fengji from '../components/echart/centerLeft2/fengji.vue';
-// import Center from './center.vue';
-// import fengji2 from "../components/echart/centerLeft2/fengji2.vue";
-// import fjdialog from "../components/dialog/dialog.vue";
-// import Predict from '../components/echart/predict/predict.vue';
+
+import Gra from '../components/echart/gra.vue';
 import Modeltraining from './modeltraining.vue';
 export default {
   data() {
@@ -147,7 +144,7 @@ export default {
     centerRight3,
     // center,
     // bottomLeft,
-    secondCenter,
+    // secondCenter,
     // Center,
     // fengji2,
 
@@ -155,6 +152,9 @@ export default {
     // bottomRight
     // fjdialog,
     // Predict,
+    // Modeltraining,
+    // graph,
+    Gra,
     Modeltraining,
   },
   mounted() {

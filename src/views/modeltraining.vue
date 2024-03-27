@@ -2,27 +2,33 @@
     <div id="center">
         <div class="up">
             <div class="bg-color-black item" style="display: flex; justify-content: center; align-items: center;">
+
                 <div style="width: 1.25rem; height: 0.625rem;">
+
                     <form>
+                        <!-- <dv-border-box-1> -->
                         <input type="file" ref="fileInput" style="display:none;" @change="uploadFile" />
                         <button class="btn"
-                            style="background-color: #007bff; color: #fff; border: none; border-radius: 5px; padding: 10px; font-size: 16px;"
-                            @click.prevent="selectFile">文件上传</button>
+                            style="background-color: #007bff; color: #fff; border: none; border-radius: 5px; padding: 10px; font-size: 14px;"
+                            @click.prevent="selectFile"><i class="el-icon-upload"></i>文件上传</button>
+                        <!-- </dv-border-box-1> -->
                     </form>
+
+                </div>
+
+            </div>
+            <div class="bg-color-black item" style="display: flex; justify-content: center; align-items: center;">
+                <div style="width: 1.25rem; height: .625rem;">
+                    <button class="btn"
+                        style="background-color: #007bff; color: #fff; border: none; border-radius: 5px; padding: 5px; font-size: 14px;"
+                        @click="DataCleaning"><i class="el-icon-s-data"></i>数据清洗</button>
                 </div>
             </div>
             <div class="bg-color-black item" style="display: flex; justify-content: center; align-items: center;">
                 <div style="width: 1.25rem; height: .625rem;">
                     <button class="btn"
-                        style="background-color: #007bff; color: #fff; border: none; border-radius: 5px; padding: 10px; font-size: 16px;"
-                        @click="DataCleaning">数据清洗</button>
-                </div>
-            </div>
-            <div class="bg-color-black item" style="display: flex; justify-content: center; align-items: center;">
-                <div style="width: 1.25rem; height: .625rem;">
-                    <button class="btn"
-                        style="background-color: #007bff; color: #fff; border: none; border-radius: 5px; padding: 10px; font-size: 16px;"
-                        @click="startTimerC">模型训练</button>
+                        style="background-color: #007bff; color: #fff; border: none; border-radius: 5px; padding: 5px; font-size: 14x;"
+                        @click="startTimerC"><i class="el-icon-video-play"></i>模型训练</button>
                 </div>
             </div>
         </div>

@@ -4,9 +4,9 @@
       <div class="d-flex pt-2 pl-2 module-item">
         <div class="d-flex" @click="activeModule = 0" :style="{ color: activeModule === 0 ? '#5cd9e8' : '#fff' }">
           <span style="color:#5cd9e8">
-            <i class="el-icon-edit"></i>
+            <i class="el-icon-data-line"></i>
           </span>
-          <span class="fs-xl text mx-2" :style="{ color: activeModule === 0 ? '#5cd9e8' : '#fff' }">新风机</span>
+          <span class="fs-xl text mx-2" :style="{ color: activeModule === 0 ? '#5cd9e8' : '#fff' }">风电功率曲线</span>
         </div>
       </div>
       <div v-if="activeModule === 0">
@@ -122,7 +122,7 @@ export default {
 }
 
 .module-item {
-  height: 100px;
+  height: 30px;
 }
 
 .module-item .text {
@@ -130,6 +130,6 @@ export default {
 }
 
 .module-item icon {
-  font-size: 30px;
+  font-size: 50px;
 }
 </style>
