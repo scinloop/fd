@@ -58,7 +58,7 @@
                 <centerLeft4 @changeTab="handleTabChange" />
               </dv-border-box-12>
               <dv-border-box-13>
-                <bottomLeft />
+                <!-- <bottomLeft /> -->
               </dv-border-box-13>
 
             </div>
@@ -98,10 +98,8 @@
         </div>
         <div class="body-box" v-if="currentTab === 3">
           <dv-border-box-13>
-            <!-- <modeltraining></modeltraining> -->
-            <!-- <graph />
-             -->
-            <gra />
+            <indexc />
+            <!-- <div>hi</div> -->
           </dv-border-box-13>
         </div>
 
@@ -123,8 +121,9 @@ import centerRight3 from "./centerRight3";
 // import secondCenter from "./secondCenter";
 import ThreeCenter from "./ThreeCenter";
 
-import Gra from '../components/echart/gra.vue';
+// import Gra from '../components/echart/gra.vue';
 import Modeltraining from './modeltraining.vue';
+import Indexc from './indexc.vue';
 export default {
   data() {
     return {
@@ -154,8 +153,9 @@ export default {
     // Predict,
     // Modeltraining,
     // graph,
-    Gra,
+    // Gra,
     Modeltraining,
+    Indexc,
   },
   mounted() {
     this.cancelLoading();
